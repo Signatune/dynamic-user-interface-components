@@ -1,7 +1,6 @@
 import "./style.css";
 
-function DropDownMenu() {
-  const options = ["One", "Two", "Three", "Four", "Five", "Six"];
+function DropDownMenu(options) {
   let selected = "Select...";
 
   const menuEl = document.createElement("div");
