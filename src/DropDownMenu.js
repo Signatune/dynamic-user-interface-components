@@ -2,6 +2,7 @@ import "./style.css";
 
 function DropDownMenu(options) {
   let selected = "Select...";
+  let expanded = false;
 
   const menuEl = document.createElement("div");
   menuEl.classList.add("menu");
@@ -13,7 +14,7 @@ function DropDownMenu(options) {
   function render() {
     menuEl.innerHTML = `
       <div class="selected">${selected}</div>
-      <ul class="options">
+      <ul class="options ${expanded ? "visible" : ""}">
         ${options
           .map((option, index) => {
             if (option !== selected) {
@@ -27,11 +28,13 @@ function DropDownMenu(options) {
     `;
 
     menuEl.querySelector(".selected").addEventListener("click", () => {
-      menuEl.querySelector(".options").classList.add("visible");
+      expanded = !expanded;
+      render();
     });
 
     menuEl.querySelectorAll(".option").forEach((option) => {
       option.addEventListener("click", () => {
+        expanded = false;
         setSelected(option.id);
         render();
       });
