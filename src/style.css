@@ -1,0 +1,14 @@
+.menu {
+  width: 200px;
+}
+
+.options {
+  display: none;
+}
+
+.options.visible {
+  display: block;
+  overflow: scroll;
+  max-height: 75px;
+  border: 1px black solid;
+}
