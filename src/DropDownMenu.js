@@ -21,7 +21,7 @@ function DropDownMenu() {
               return `<li id="${index}" class="option">${option}</li>`;
             }
 
-            return `<li id="${index} class="option">${option} ✓</li>`;
+            return `<li id="${index}" class="option">${option} ✓</li>`;
           })
           .join("")}
       </ul>
