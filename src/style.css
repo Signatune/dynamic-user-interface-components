@@ -10,6 +10,7 @@ body {
 .menu {
   width: 200px;
   background: white;
+  user-select: none;
 }
 
 .options {
