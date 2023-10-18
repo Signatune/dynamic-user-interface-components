@@ -1,5 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: green;
+}
+
 .menu {
   width: 200px;
+  background: white;
 }
 
 .options {
@@ -7,8 +17,23 @@
 }
 
 .options.visible {
+  position: absolute;
+  padding: 5px;
+  background: white;
+  top: 30px;
+  width: 188px;
+  list-style: none;
   display: block;
   overflow: scroll;
   max-height: 75px;
   border: 1px black solid;
+}
+
+li:hover {
+  background: lightgrey;
+}
+
+.selected {
+  border: 1px black solid;
+  padding: 5px;
 }
